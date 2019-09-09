@@ -11,7 +11,7 @@ public class Test {
 			      public void run() {
 					synchronized(object){
 						 for(int i=0;i<100;i++){
-							 System.out.println(Thread.currentThread().getName()+"£¬ÊýÖµ£º"+(i*2));
+							 System.out.println(Thread.currentThread().getName()+",æ•°å€¼"+(i*2));
 							 object.notify();
 							 try {
 								object.wait();
@@ -31,7 +31,7 @@ public class Test {
 			      public void run() {
 					synchronized(object){
 						 for(int i=0;i<100;i++){
-							 System.out.println(Thread.currentThread().getName()+"£¬ÊýÖµ£º"+(i*2+1));
+							 System.out.println(Thread.currentThread().getName()+",æ•°å€¼"+(i*2+1));
 							 object.notify();
 							 try {
 								object.wait();
